@@ -31,6 +31,10 @@ public class Contact {
         return number;
     }
 
+    public String getFullName(){
+        return firstName + " " + lastName;
+    }
+
     public String getContactGroup() {
         return contactGroup;
     }
