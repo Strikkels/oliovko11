@@ -27,8 +27,18 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ContactViewHolder holder, int position) {
         holder.contactNameText.setText(contacts.get(position).getFirstName() + " " + contacts.get(position).getLastName());
-        holder.contactNumberText.setText(contacts.get(position).getNumber());
-        holder.contactGroupText.setText(contacts.get(position).getContactGroup());
+
+        holder.infoImage.setOnClickListener(view -> {
+            int pos = holder.getAdapterPosition();
+            holder.contactNumberText.setText(contacts.get(position).getNumber());
+            holder.contactGroupText.setText(contacts.get(position).getContactGroup());
+        });
+
+        holder.removeImage.setOnClickListener(view -> {
+            int pos = holder.getAdapterPosition();
+            ContactStorage.getInstance().removeContact(contacts.get(pos).getId());
+            notifyItemRemoved(pos);
+        });
     }
 
     @Override

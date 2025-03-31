@@ -22,7 +22,14 @@ public class ContactStorage {
         contacts.add(contact);
     }
 
-    public void removeContact(Contact contact){
-        //contacts.remove(contact);
+    public void removeContact(int contactId){
+        int i = 0;
+        for (Contact c : contacts) {
+            if(c.getId() == (contactId)){
+                break;
+            }
+            i++;
+        }
+        contacts.remove(i);
     }
 }

@@ -35,4 +35,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddContactActivity.class);
         startActivity(intent);
     }
+
+    public void sortAlphabetically(View view){
+
+    }
+    public void sortByGroup(View view){
+
+    }
+
 }

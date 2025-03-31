@@ -10,7 +10,7 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -26,7 +26,6 @@
             android:id="@+id/ContactNumberText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Numero"
             android:textColor="#020101"
             android:textSize="20sp" />
 
@@ -34,22 +33,32 @@
             android:id="@+id/ContactGroupText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ryhmä"
             android:textColor="#020101"
             android:textSize="20sp" />
 
-        <ImageButton
-            android:id="@+id/ContactDetailsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_dialog_info" />
+    </LinearLayout>
 
-        <ImageButton
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
             android:id="@+id/ContactDeleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_delete" />
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ContactDetailsButton"
+            android:src="@android:drawable/ic_menu_delete" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/ContactDetailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@android:drawable/ic_menu_info_details" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
