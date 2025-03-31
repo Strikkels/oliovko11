@@ -40,8 +40,8 @@ public class AddContactActivity extends AppCompatActivity {
     }
 
     public void createContact(View view){
-        String lastName = contactFirstName.getText().toString();
-        String firstName = contactLastName.getText().toString();
+        String lastName = contactLastName.getText().toString();
+        String firstName = contactFirstName.getText().toString();
         String phoneNumber = contactNumber.getText().toString();
 
         int checkedRadioButtonId = rgContactGroup.getCheckedRadioButtonId();
